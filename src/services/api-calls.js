@@ -5,6 +5,6 @@ export function getPokedexList() {
 }
 
 export function getPokemonList() {
-    return fetch(`${baseUrl}/api/vs/pokemon`)
+    return fetch(`${baseUrl}/api/v2/pokemon`)
     .then(res => res.json())
-  }
+}

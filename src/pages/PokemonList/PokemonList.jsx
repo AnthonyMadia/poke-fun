@@ -8,7 +8,7 @@ const PokemonList = (props) => {
   useEffect(()=> {
     // API call, then adjust state
     getPokemonList()
-    .then(pokemonList => setPokemonList(pokemonList.results))
+    .then(poke => setPokemonList(poke.results))
   }, [])
   
   return (
@@ -22,7 +22,7 @@ const PokemonList = (props) => {
               to="/pokemon"
               state={{ pokemon }}
             >
-              {pokemon.name}
+              {pokemon?.name}
             </Link><br />
           </div>
         ))}
