@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+import NavBar from './Components/NavBar/NavBar';
+import PokedexList from './pages/PokedexList';
 
 function App() {
+  const [navItems, setNavItems] = useState([
+    {url: "/pokedex-list", name: "Pokedex List"},
+    {url: "/pokemon-list", name: "Pokemon"},
+    {url: "/Species-list", name: "Species List"}
+  ])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar navItems={navItems}/>
+      <Routes>
+        <Route path="/pokedex-list" element={<PokedexList />}/>
+      </Routes>
+    </>
   );
 }
 
