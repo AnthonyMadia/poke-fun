@@ -17,12 +17,20 @@ const PokemonList = (props) => {
       {pokemonList?.length ?
       <>
         {pokemonList.map((pokemon) => (
-          <div key={pokemon.name}>
+          <div >
             <Link
+              key={pokemon.name}
               to="/pokemon"
               state={{ pokemon }}
             >
-              {pokemon?.name}
+              <div id='classDiv'>
+                <img 
+                  src={`${pokemon.sprite.front_default}`} 
+                  alt="alt" 
+                  style={{ width: "100px", height: "100px" }}
+                  />
+                {pokemon?.name}
+              </div> 
             </Link><br />
           </div>
         ))}

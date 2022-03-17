@@ -20,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/pokedex-list" element={<PokedexList />}/>
         <Route path="/pokemon-list" element={<PokemonList />}/>
+        <Route path="/pokemon" element={<PokemonDetails />}/>
       </Routes>
     </>
   );
