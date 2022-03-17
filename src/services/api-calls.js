@@ -1,10 +1,10 @@
-const baseUrl = "https://pokeapi.co"
+const baseUrl = "https://pokeapi.co/api/v2"
 
 export function getPokedexList() {
-    return fetch(`${baseUrl}/api/v2/pokedex`)
+    return fetch(`${baseUrl}/pokedex`)
 }
 
 export function getPokemonList() {
-    return fetch(`${baseUrl}/api/v2/pokemon`)
+    return fetch(`${baseUrl}/pokemon`)
     .then(res => res.json())
 }

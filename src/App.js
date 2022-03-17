@@ -4,6 +4,7 @@ import { useState } from 'react';
 import NavBar from './Components/NavBar/NavBar';
 import PokedexList from './pages/PokedexList/PokedexList';
 import PokemonList from './pages/PokemonList/PokemonList';
+import PokemonDetails from './pages/PokemonDetails/PokemonDetails';
 
 function App() {
   const [navItems, setNavItems] = useState([
