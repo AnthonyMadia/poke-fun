@@ -2,7 +2,8 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import NavBar from './Components/NavBar/NavBar';
-import PokedexList from './pages/PokedexList';
+import PokedexList from './pages/PokedexList/PokedexList';
+import PokemonList from './pages/PokemonList/PokemonList';
 
 function App() {
   const [navItems, setNavItems] = useState([
@@ -17,6 +18,7 @@ function App() {
       <NavBar navItems={navItems}/>
       <Routes>
         <Route path="/pokedex-list" element={<PokedexList />}/>
+        <Route path="/pokemon-list" element={<PokemonList />}/>
       </Routes>
     </>
   );

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getPokedexList } from '../services/api-calls'
+import { getPokedexList } from '../../services/api-calls'
 import { Link } from 'react-router-dom'
 
 const PokedexList = (props) => {
