@@ -12,6 +12,7 @@ const PokemonDetails = (props) => {
         <>
             <div>
                 <h3>Pokemon details</h3>
+                <h4>add getDetails api call</h4>
             </div>
         </>
      );

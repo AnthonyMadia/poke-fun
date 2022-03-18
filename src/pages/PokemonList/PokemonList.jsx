@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getPokemonList } from '../../services/api-calls'
 import { Link } from 'react-router-dom'
+import PokemonDisplay from '../../PokemonDisplay/PokemonDisplay'
 
 const PokemonList = (props) => {
   const [pokemonList, setPokemonList] = useState([])
@@ -14,25 +15,13 @@ const PokemonList = (props) => {
   return (
     <>
       <h3>Pokemon List - Gotta catch em all</h3>
+      
       {pokemonList?.length ?
       <>
         {pokemonList.map((pokemon) => (
-          <div >
-            <Link
-              key={pokemon.name}
-              to="/pokemon"
-              state={{ pokemon }}
-            >
-              <div id='classDiv'>
-                <img 
-                  src={`${pokemon.sprite.front_default}`} 
-                  alt="alt" 
-                  style={{ width: "100px", height: "100px" }}
-                  />
-                {pokemon?.name}
-              </div> 
-            </Link><br />
-          </div>
+          // this is where second component will go where pokemon is the prop
+          <PokemonDisplay pokemon={pokemon}/>
+          
         ))}
       </>
       :
