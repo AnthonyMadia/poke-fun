@@ -16,8 +16,8 @@ const PokedexList = (props) => {
             <div>
                 <h3>This is the Pokedex List!</h3>
                 <div className="icon-container">
-                    {pokedexes?.map((pokedexTitle) => (
-                        <Link to='pokedex' state={{pokedexTitle}} key={pokedexTitle.name}>
+                    {pokedexes?.map((pokedexTitle, idx) => (
+                        <Link to='pokedex' state={{pokedexTitle}} key={pokedexTitle.idx}>
                             <div>
                                 {/* <img 
                                     style={{ width: "100px", height: "100px" }}

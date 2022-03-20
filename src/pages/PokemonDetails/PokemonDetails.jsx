@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react'
+import { getDetails } from '../../services/api-calls'
 
-const PokemonDetails = (props) => {
-
+const PokemonDetails = ({ pokemon }) => {
+   console.log(pokemon)
     const [pokemonDetails, setPokemonDetails] = useState([])
 
     useEffect(() => {
         // this is where out API call will go!
+        // getDetails(pokemon.url)
+        // .then(details => console.log(details))
     }, [])
 
     return ( 

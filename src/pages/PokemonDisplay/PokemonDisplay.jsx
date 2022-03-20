@@ -1,29 +1,29 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getSprite } from '../../services/api-calls'
-
-
+import { getDetails } from '../../services/api-calls'
+import '../../App.css'
 
 const PokemonDisplay = ({ pokemon }) => {
-    // console.log(pokemon.url)
+    // console.log(pokemon)
     const [pokeDisplay, setPokeDisplay] = useState([])
 
 
     useEffect(() => {
         //api call and adjust state
-        getSprite(pokemon.url)
+        getDetails(pokemon.url)
         .then(display => setPokeDisplay(display))
         
     }, [])
 
 
     return ( 
-      <div>
+      <div className='poke-display'>
             <Link
               key={pokemon.name}
               to="/pokemon"
-              state={{ pokemon }} 
+              pokemon={pokemon} 
             >
+              
               <div id='classDiv'>
               <img 
                 src={pokeDisplay?.sprites?.front_default} 

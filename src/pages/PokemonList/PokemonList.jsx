@@ -20,9 +20,11 @@ const PokemonList = (props) => {
       <>
         {pokemonList.map((pokemon) => (
           // this is where second component will go where pokemon is the prop
-          <PokemonDisplay pokemon={pokemon}/>
-          
+          <div>
+            <PokemonDisplay pokemon={pokemon}/>
+          </div>
         ))}
+        
       </>
       :
       <>

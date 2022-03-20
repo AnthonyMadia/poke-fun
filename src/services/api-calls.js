@@ -11,7 +11,7 @@ export function getPokemonList() {
 }
 
 // api call to the images url
-export function getSprite(url) {
+export function getDetails(url) {
     return fetch(url)
     .then(res => res.json())
 }
