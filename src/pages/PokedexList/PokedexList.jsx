@@ -15,10 +15,10 @@ const PokedexList = (props) => {
         <>
             <div>
                 <h3>This is the Pokedex List!</h3>
-                <div className="icon-container">
+                <div className="poke-display">
                     {pokedexes?.map((pokedexTitle, idx) => (
                         <Link to='pokedex' state={{pokedexTitle}} key={pokedexTitle.idx}>
-                            <div>
+                            <div id='classDiv'>
                                 {/* <img 
                                     style={{ width: "100px", height: "100px" }}
                                     src={`${pokedexTitle.name}`}
