@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getPokemonList } from '../../services/api-calls'
 import { Link } from 'react-router-dom'
-import PokemonDisplay from '../../PokemonDisplay/PokemonDisplay'
+import PokemonDisplay from '../PokemonDisplay/PokemonDisplay'
 
 const PokemonList = (props) => {
   const [pokemonList, setPokemonList] = useState([])

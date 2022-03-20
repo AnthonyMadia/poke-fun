@@ -11,7 +11,7 @@ export function getPokemonList() {
 }
 
 // api call to the images url
-export function getSprite(pokeUrl) {
-    return fetch(`${baseUrl}/pokemon${pokeUrl}`)
+export function getSprite(url) {
+    return fetch(url)
     .then(res => res.json())
 }
